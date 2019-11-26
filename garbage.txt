@@ -1,0 +1,41 @@
+int randInt = (rand() % 99);
+
+        if(randInt >= 0 && randInt < 10){
+            tracks[i] = tracks[i-1];
+        }
+        if(randInt >= 10 && randInt < 25){
+            if(tracks[i-1] > 10)
+                tracks[i] = tracks[i-1] - (rand() % 10);
+            else
+                tracks[i] = tracks[i-1] + (rand() % 10);
+        }
+        if(randInt >= 25 && randInt < 35){
+            if(tracks[i-1] > 40)
+                tracks[i] = tracks[i-1] - (rand() % 40);
+            else
+                tracks[i] = tracks[i-1] + (rand() % 40);
+        }
+        if(randInt >=35 && randInt < 60){
+            if(tracks[i-1] > 60)
+                tracks[i] = tracks[i-1] - (rand() % 60);
+            else
+                tracks[i] = tracks[i-1] + (rand() % 60);
+        }
+        if(randInt >= 60 && randInt < 80){
+            if(tracks[i-1] > 80)
+                tracks[i] = tracks[i-1] - (rand() % 80);
+            else
+                tracks[i] = tracks[i-1] + (rand() % 80);
+        }
+        if(randInt >= 80 && randInt < 99){
+            if(tracks[i] > 99)
+                tracks[i] = tracks[i-1] - (rand() % 99);
+            else
+                tracks[i] = tracks[i-1] + (rand() % 99);
+        }
+        if(randInt == 99){
+            if(tracks[i-1] > 50)
+                tracks[i] = 0;
+            else
+                tracks[i] = 100;
+        }
